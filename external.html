@@ -1,0 +1,655 @@
+1. a) Hyperlinks with <a> tag and href, target attributes 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Hyperlink Example</title> 
+</head> 
+<body> 
+<h2>Hyperlink Examples</h2> 
+<a href="https://www.google.com" target="_blank">Open Google in new 
+tab</a><br> 
+<a href="https://www.wikipedia.org" target="_self">Open Wikipedia in 
+same tab</a> 
+</body> 
+</html> 
+1. b) Internal and External JavaScript 
+HTML File (index.html): 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>JavaScript Example</title> 
+<script> 
+// Internal JavaScript 
+function greet() { 
+alert("Hello from Internal JavaScript!"); 
+} 
+</script> 
+<script src="external.js"></script> <!-- External JS --> 
+</head> 
+<body> 
+<button onclick="greet()">Internal JS</button> 
+<button onclick="externalGreet()">External JS</button> 
+</body> 
+</html> 
+External File (external.js): 
+javascript 
+Copy 
+function externalGreet() { 
+alert("Hello from External JavaScript!"); 
+} 
+2. a) CSS Color Referencing 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>CSS Color References</title> 
+<style> 
+.nameColor { color: red; } 
+.hexColor { color: #00ff00; } 
+.rgbColor { color: rgb(0, 0, 255); } 
+</style> 
+</head> 
+<body> 
+<p class="nameColor">This is red using color name.</p> 
+<p class="hexColor">This is green using HEX code.</p> 
+<p class="rgbColor">This is blue using RGB code.</p> 
+</body> 
+</html> 
+2. b) Document Object Properties and Methods 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Document Object Example</title> 
+</head> 
+<body> 
+  <script> 
+    document.write("Title of the document: " + document.title + 
+"<br>"); 
+    document.write("URL of the document: " + document.URL + "<br>"); 
+    document.write("Last modified: " + document.lastModified); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+3. a) HTML Table Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>HTML Table</title> 
+</head> 
+<body> 
+  <table border="1"> 
+    <tr> 
+      <th>Day</th> 
+      <th colspan="2">Time</th> 
+    </tr> 
+    <tr> 
+      <td rowspan="2">Monday</td> 
+      <td>10 AM</td> 
+      <td>11 AM</td> 
+    </tr> 
+    <tr> 
+      <td>12 PM</td> 
+      <td>1 PM</td> 
+    </tr> 
+  </table> 
+</body> 
+</html> 
+ 
+ 
+3. b) Switch Case for Weekdays 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Weekdays with Switch</title> 
+</head> 
+<body> 
+  <script> 
+    let day = new Date().getDay(); 
+    let weekday; 
+    switch(day) { 
+      case 0: weekday = "Sunday"; break; 
+      case 1: weekday = "Monday"; break; 
+      case 2: weekday = "Tuesday"; break; 
+      case 3: weekday = "Wednesday"; break; 
+      case 4: weekday = "Thursday"; break; 
+      case 5: weekday = "Friday"; break; 
+      case 6: weekday = "Saturday"; break; 
+      default: weekday = "Invalid day"; 
+    } 
+    document.write("Today is " + weekday); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+4. a) CSS Font and Text 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>CSS Font and Text</title> 
+  <style> 
+    .style1 { 
+      font-size: 20px; 
+      font-weight: bold; 
+      font-style: italic; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <p class="style1">This is styled text using font-size, weight, and 
+style.</p> 
+</body> 
+</html> 
+ 
+ 
+4. b) Window Object Properties and Methods 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Window Object Example</title> 
+</head> 
+<body> 
+  <script> 
+    alert("Window width: " + window.innerWidth + "px\nWindow height: " 
++ window.innerHeight + "px"); 
+    window.open("https://www.example.com", "_blank"); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+5. a) Thumbnail Image Gallery 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Image Gallery</title> 
+</head> 
+<body> 
+  <h2>Thumbnail Gallery</h2> 
+  <a href="full1.jpg" target="_blank"> 
+    <img src="thumb1.jpg" width="100" height="100"> 
+  </a> 
+  <a href="full2.jpg" target="_blank"> 
+    <img src="thumb2.jpg" width="100" height="100"> 
+  </a> 
+  <a href="full3.jpg" target="_blank"> 
+    <img src="thumb3.jpg" width="100" height="100"> 
+  </a> 
+</body> 
+</html> 
+ 
+ 
+5. b) Print 1 to 10 using Loops 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Loop Examples</title> 
+</head> 
+<body> 
+  <script> 
+    document.write("<strong>Using for loop:</strong><br>"); 
+    for (let i = 1; i <= 10; i++) { 
+      document.write(i + " "); 
+    } 
+ 
+    document.write("<br><strong>Using while loop:</strong><br>"); 
+    let j = 1; 
+    while (j <= 10) { 
+      document.write(j + " "); 
+      j++; 
+    } 
+ 
+    document.write("<br><strong>Using do-while loop:</strong><br>"); 
+    let k = 1; 
+    do { 
+      document.write(k + " "); 
+      k++; 
+    } while (k <= 10); 
+  </script> 
+</body> 
+</html> 
+6.a) Pseudo-element Selector and Combinator Selector 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>CSS Selectors</title> 
+  <style> 
+    /* Pseudo-element */ 
+    p::first-letter { 
+      font-size: 200%; 
+      color: red; 
+    } 
+ 
+    /* Combinator: descendant */ 
+    div p { 
+      color: blue; 
+    } 
+ 
+    /* Combinator: child */ 
+    ul > li { 
+      font-weight: bold; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div> 
+    <p>This paragraph is inside a div.</p> 
+  </div> 
+  <ul> 
+    <li>Item 1</li> 
+    <li>Item 2</li> 
+  </ul> 
+</body> 
+</html> 
+ 
+ 
+6.b) Math Object Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Math Object</title> 
+</head> 
+<body> 
+  <script> 
+    document.write("Math.PI: " + Math.PI + "<br>"); 
+    document.write("Math.sqrt(25): " + Math.sqrt(25) + "<br>"); 
+    document.write("Math.pow(2, 4): " + Math.pow(2, 4) + "<br>"); 
+    document.write("Math.random(): " + Math.random() + "<br>"); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+7.a) Images as Links to Profiles 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Profile Images</title> 
+</head> 
+<body> 
+  <h2>Profile Links</h2> 
+  <a href="https://your-profile.com" target="_blank"> 
+    <img src="your.jpg" width="150" height="150" alt="Your Image"> 
+  </a> 
+  <a href="https://friends-profile.com" target="_blank"> 
+    <img src="friend.jpg" width="150" height="150" alt="Friend's 
+Image"> 
+  </a> 
+</body> 
+</html> 
+ 
+ 
+7.b) Armstrong Number Check 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Armstrong Number</title> 
+</head> 
+<body> 
+  <script> 
+    let num = 153; 
+    let temp = num, sum = 0; 
+    while (temp > 0) { 
+      let digit = temp % 10; 
+      sum += digit ** 3; 
+      temp = Math.floor(temp / 10); 
+    } 
+ 
+    if (sum === num) { 
+      document.write(num + " is an Armstrong number."); 
+    } else { 
+      document.write(num + " is not an Armstrong number."); 
+    } 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+8.a) Semantic Tags Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Semantic Tags</title> 
+</head> 
+<body> 
+  <header><h1>Welcome to My Page</h1></header> 
+  <nav><a href="#">Home</a> | <a href="#">About</a></nav> 
+  <main> 
+    <section> 
+      <article> 
+        <h2>Article Title</h2> 
+        <p>This is an article inside a section.</p> 
+        <figure> 
+          <img src="img.jpg" width="200"> 
+          <figcaption>Image description</figcaption> 
+        </figure> 
+      </article> 
+    </section> 
+    <aside>Side content</aside> 
+  </main> 
+  <footer>&copy; 2025 My Site</footer> 
+</body> 
+</html> 
+ 
+ 
+8.b) String Object Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>String Object</title> 
+</head> 
+<body> 
+  <script> 
+    let str = "Hello, JavaScript!"; 
+    document.write("Length: " + str.length + "<br>"); 
+    document.write("Uppercase: " + str.toUpperCase() + "<br>"); 
+    document.write("Substring (0,5): " + str.substring(0, 5) + 
+"<br>"); 
+    document.write("Index of 'Script': " + str.indexOf("Script")); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+9.a) CSS Box Model Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>CSS Box Model</title> 
+  <style> 
+    .box { 
+      width: 200px; 
+      padding: 20px; 
+      border: 5px solid black; 
+      margin: 30px; 
+      background-color: lightblue; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <div class="box">This box demonstrates content, padding, border, and 
+margin.</div> 
+</body> 
+</html> 
+ 
+ 
+9.b) Bank Denomination Program 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Bank Denomination</title> 
+</head> 
+<body> 
+  <script> 
+    let amount = 163; 
+    let notes = [100, 50, 20, 10, 5, 2, 1]; 
+    for (let i = 0; i < notes.length; i++) { 
+      let count = Math.floor(amount / notes[i]); 
+      if (count > 0) { 
+        document.write(count + " - " + notes[i] + "s<br>"); 
+      } 
+      amount %= notes[i]; 
+    } 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+10.a) CSS Selector Types 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>CSS Selectors</title> 
+  <style> 
+    /* Simple Selectors */ 
+    p { color: blue; } 
+    #unique { font-weight: bold; } 
+    .highlight { background: yellow; } 
+    * { font-family: Arial; } 
+ 
+    /* Grouping */ 
+    h1, h2 { color: green; } 
+ 
+    /* Pseudo-class */ 
+    a:hover { color: red; } 
+ 
+    /* Pseudo-element */ 
+    p::after { content: " 
+�
+�
+ "; } 
+  </style> 
+</head> 
+<body> 
+  <h1>Heading One</h1> 
+  <h2>Heading Two</h2> 
+  <p id="unique" class="highlight">Styled paragraph</p> 
+  <a href="#">Hover me</a> 
+</body> 
+</html> 
+ 
+ 
+10.b) Date Object Example 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Date Object</title> 
+</head> 
+<body> 
+  <script> 
+    let now = new Date(); 
+    document.write("Current Date: " + now.toDateString() + "<br>"); 
+    document.write("Current Time: " + now.toLocaleTimeString() + 
+"<br>"); 
+    document.write("Year: " + now.getFullYear() + "<br>"); 
+    document.write("Month: " + (now.getMonth() + 1)); 
+  </script> 
+</body> 
+</html> 
+11.a) Working of Lists in HTML 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>HTML Lists</title> 
+</head> 
+<body> 
+  <h2>Ordered List</h2> 
+  <ol> 
+    <li>HTML</li> 
+    <li>CSS</li> 
+    <li>JavaScript</li> 
+  </ol> 
+ 
+  <h2>Unordered List</h2> 
+  <ul> 
+    <li>Apple</li> 
+    <li>Banana</li> 
+    <li>Mango</li> 
+  </ul> 
+ 
+  <h2>Description List</h2> 
+  <dl> 
+    <dt>HTML</dt> 
+    <dd>HyperText Markup Language</dd> 
+    <dt>CSS</dt> 
+    <dd>Cascading Style Sheets</dd> 
+  </dl> 
+</body> 
+</html> 
+ 
+ 
+11.b) Fibonacci Series Function 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Fibonacci Series</title> 
+</head> 
+<body> 
+  <script> 
+    function fibonacci(n) { 
+      let a = 0, b = 1, next; 
+      document.write("Fibonacci Series: "); 
+      for (let i = 1; i <= n; i++) { 
+        document.write(a + " "); 
+        next = a + b; 
+        a = b; 
+        b = next; 
+      } 
+    } 
+ 
+    fibonacci(10); // Change number for more terms 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+12.a) Time Table using HTML Table 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Time Table</title> 
+</head> 
+<body> 
+  <h2>Weekly Time Table</h2> 
+  <table border="1"> 
+    <tr> 
+      <th>Day</th> 
+      <th>9-10 AM</th> 
+      <th>10-11 AM</th> 
+      <th>11-12 PM</th> 
+    </tr> 
+    <tr> 
+      <td>Monday</td> 
+      <td>Math</td> 
+      <td>Science</td> 
+      <td>English</td> 
+    </tr> 
+    <tr> 
+      <td>Tuesday</td> 
+      <td>History</td> 
+      <td>Math</td> 
+      <td>Computer</td> 
+    </tr> 
+  </table> 
+</body> 
+</html> 
+ 
+ 
+12.b) Factorial Function in JavaScript 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Factorial</title> 
+</head> 
+<body> 
+  <script> 
+    function factorial(n) { 
+      let fact = 1; 
+      for (let i = 1; i <= n; i++) { 
+        fact *= i; 
+      } 
+      document.write("Factorial of " + n + " is " + fact); 
+    } 
+ 
+    factorial(5); // Change number to test different values 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+13.a) Thumbnail Image Gallery 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Thumbnail Gallery</title> 
+</head> 
+<body> 
+  <h2>Thumbnail Image Gallery</h2> 
+  <a href="full1.jpg" target="_blank"><img src="thumb1.jpg" 
+width="100" height="100" alt="Image 1"></a> 
+  <a href="full2.jpg" target="_blank"><img src="thumb2.jpg" 
+width="100" height="100" alt="Image 2"></a> 
+  <a href="full3.jpg" target="_blank"><img src="thumb3.jpg" 
+width="100" height="100" alt="Image 3"></a> 
+</body> 
+</html> 
+ 
+ 
+13.b) Regex and String Object Methods 
+html 
+Copy 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Regex and String</title> 
+</head> 
+<body> 
+  <script> 
+    let text = "The rain in Spain stays mainly in the plain."; 
+     
+    // Using RegEx 
+    let result = text.match(/ain/g); 
+    document.write("Matched substrings: " + result + "<br>"); 
+ 
+    // Other String methods 
+    document.write("Length: " + text.length + "<br>"); 
+    document.write("Uppercase: " + text.toUpperCase() + "<br>"); 
+    document.write("Replace: " + text.replace("rain", "sun") + 
+"<br>"); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+ 
