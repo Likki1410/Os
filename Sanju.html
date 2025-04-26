@@ -1,0 +1,721 @@
+1
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink Example</title>
+</head>
+<body>
+<h2>Hyperlink Examples</h2>
+<a href="https://www.google.com" target="_blank">Open Google in new
+tab</a><br>
+<a href="https://www.wikipedia.org" target="_self">Open Wikipedia in
+same tab</a>
+</body>
+</html>
+___________
+sample.html:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+    <script>
+    document.write("This is the way of Internal");
+    </script>
+    <script src="external.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+external.js:
+
+document.write("This is way of External");
+____________________________________________________________
+                                                      2
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Color References</title>
+  <style>
+    .nameColor {
+      color: red;
+    }
+    .hexColor {
+      color: #00ff00;
+    }
+    .rgbColor {
+      color: rgb(0, 0, 255);
+    }
+    .rgbaColor {
+      color: rgba(255, 0, 0, 0.5);
+    }
+    .hslColor {
+      color: hsl(0, 0%, 0%);
+    }
+    .hslaColor {
+      color: hsla(39, 100%, 50%, 1);
+    }
+  </style>
+</head>
+<body>
+  <p class="nameColor">This is using color name.</p>
+  <p class="hexColor">This is using HEX code.</p>
+  <p class="rgbColor">This is using RGB code.</p>
+  <p class="rgbaColor">This is using RGBA code.</p>
+  <p class="hslColor">This is using HSL code.</p>
+  <p class="hslaColor">This is using HSLA code.</p>
+</body>
+</html>
+___________
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p class="example"></p>
+    <p class="example"></p>    
+    <script>
+        document.write("Title of the document: " + document.title + "<br>");
+        document.write("URL of the document: " + document.URL + "<br>");
+        document.write("Last modified: " + document.lastModified + "<br>");
+        document.write("Domain: " + document.domain + "<br>");
+        document.write("Document head element: " + document.head + "<br>");
+        document.write("Document body element: " + document.body + "<br>");
+        document.write("Document element: " + document.documentElement + "<br>");        
+        document.getElementById("p1").innerHTML = "hi";
+        document.getElementsByClassName("example")[0].innerHTML="hello";
+        document.getElementsByTagName("p")[2].innerHTML="hello hi";        
+    </script>
+</body>
+</html>
+________________________________________________________
+                                                    3
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Table Example</title>
+</head>
+<body>
+
+  <h2>Student Marks Table</h2>
+
+  <table border="1">
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="3">Subjects</th>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <th>Science</th>
+      <th>English</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>85</td>
+      <td>78</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Emma</td>
+      <td>90</td>
+      <td>88</td>
+      <td>95</td>
+    </tr>
+  </table>
+</body>
+</html>
+___________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weekdays with Switch</title>
+</head>
+<body>
+<script>
+var n=parseInt(prompt("Enter a number to display weekdays:"));
+var wname;
+switch(n) {
+    case 1: wname = "Sunday";
+            break;
+    case 2: wname = "Monday";
+            break;
+    case 3: wname = "Tuesday";
+            break;
+    case 4: wname = "Wednesday";
+            break;
+    case 5: wname = "Thursday";
+            break;
+    case 6: wname = "Friday";
+            break;
+    case 7: wname = "Saturday";
+            break;
+    default: wname = "Invalid number";
+    }
+    document.write(wname);
+</script>
+</body>
+</html>
+________________________________________________________
+                                                            4
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Font and Text</title>
+<style>
+.style1 {
+font-size: small;
+font-weight: bold;
+font-style: italic;
+}
+</style>
+</head>
+<body>
+<p class="style1">This is styled text using font-size, weight, and
+style.</p>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Object Example</title>
+</head>
+<body>
+  <script>
+    document.write("Page URL: " + window.location.href + "<br>");
+    document.write("Window inner width: " + window.innerWidth + "<br>");
+    document.write("Window inner height: " + window.innerHeight + "<br>");
+    document.write("Screen width: " + window.screen.width + "<br>");
+    document.write("Screen height: " + window.screen.height + "<br>");
+    document.write("Screen X position: " + window.screenX + "<br>");
+    document.write("Screen Y position: " + window.screenY + "<br>");
+    window.alert("This is an alert");
+    window.confirm("Are you sure");
+    window.prompt("What is your name:");
+  </script>
+</body>
+</html>
+_______________________________________________________
+                                                   5
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Gallery</title>
+</head>
+<body>
+<h2>Thumbnail Gallery</h2>
+<a href="full1.jpg" target="_blank">
+<img src="thumb1.jpg" width="100" height="100">
+</a>
+<a href="full2.jpg" target="_blank">
+<img src="thumb2.jpg" width="100" height="100">
+</a>
+<a href="full3.jpg" target="_blank">
+<img src="thumb3.jpg" width="100" height="100">
+</a>
+</body>
+</html>
+____________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loop Examples</title>
+</head>
+<body>
+<script>
+document.write("Using for loop:<br>");
+for (let i = 1; i <= 10; i++) {
+document.write(i + " ");
+}
+
+document.write("<br>Using while loop:<br>");
+let j = 1;
+while (j <= 10) {
+document.write(j + " ");
+j++;
+}
+
+document.write("<br>Using do-while loop:<br>");
+let k = 1;
+do {
+document.write(k + " ");
+k++;
+} while (k <= 10);
+</script>
+</body>
+</html>
+____________________________________________________________
+                                                     6
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors</title>
+<style>
+/* Pseudo-element */
+p::first-letter {
+font-size: 200%;
+color: red;
+}
+/* Combinator: descendant */
+div p {
+color: blue;
+}
+/* Combinator: child */
+ul > li {
+
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div>
+<p>This paragraph is inside a div.</p>
+</div>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+</body>
+</html>
+
+______________
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Math Example</title>
+</head>
+<body>
+
+<h2>Simple Math Object Demo</h2>
+
+<script>
+  document.write("PI: " + Math.PI + "<br>");
+  document.write("Math.E (Euler's Number): " + Math.E + "<br>");
+  document.write("Round 4.7: " + Math.round(4.7) + "<br>");
+  document.write("Square root of 25: " + Math.sqrt(25) + "<br>");
+  document.write("Floor of 4.7: " + Math.floor(4.7) + "<br>");
+  document.write("2 to the power of 3: " + Math.pow(2, 3) + "<br>");
+  document.write("Absolute value of -10: " + Math.abs(-10) + "<br>");
+  document.write("Random number (0 to 1): " + Math.random() + "<br>");
+  document.write("Max of (3, 1): " + Math.max(3, 1) + "<br>");
+  document.write("Min of (3, 7): " + Math.min(3, 7) + "<br>");
+</script>
+
+</body>
+</html>
+
+__________________________________________________________
+                                                          7
+<!DOCTYPE html>
+<html>
+<body>
+  <a href="myprofile.html">
+    <img src="me.jpg" width="100" height="100"></a>
+  <a href="friend.html">
+    <img src="friend.jpg" width="100" height="100"></a>
+</body>
+</html>
+
+myprofile.html:
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <h1><u>MY PROFILE</u></h1>
+        <ul>
+            <li> Name:</li>
+            <li>Age:</li>
+            <li>Gender:</li>
+            <li>Branch:</li>
+            <li>Address:</li>
+        </ul>
+    </body>
+</html>
+
+friend.html:
+<html>
+    <head>
+        <title>My Friend Page</title>
+    </head>
+    <body>
+        <h1><u>MY Friend</u></h1>
+        <ul>
+            <li> Name:</li>
+            <li>Age:</li>
+            <li>Gender:</li>
+            <li>Branch:</li>
+            <li>Address:</li>
+        </ul>
+    </body>
+</html>
+
+
+______________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Armstrong Number</title>
+</head>
+<body>
+<script>
+let num = parseInt(prompt("Enter 3 digit number:"));
+let temp = num, sum = 0;
+while (temp > 0) {
+let rem = temp % 10;
+sum += rem ** 3;
+temp = Math.floor(temp / 10);
+}
+if (sum === num) {
+document.write(num + " is an Armstrong number.");
+} else {
+document.write(num + " is not an Armstrong number.");
+}
+</script>
+</body>
+</html>
+________________________________________________________
+                                                          8
+<!DOCTYPE html>
+<html>
+<head>
+<title>Semantic Tags</title>
+</head>
+<body>
+<header><h1>Welcome to My Page</h1></header>
+<nav><a href="#">Home</a> | <a href="#">About</a></nav>
+<main>
+<section>
+<article>
+<h2>Article Title</h2>
+<p>This is an article inside a section.</p>
+<figure>
+<img src="img.jpg" width="200">
+<figcaption>Image description</figcaption>
+</figure>
+</article>
+</section>
+<aside>Side content</aside>
+</main>
+<footer>&copy; 2025 My Site</footer>
+</body>
+</html>
+______________
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Methods Example</title>
+</head>
+<body>
+
+<h2>JavaScript String Methods Demo</h2>
+
+<script>
+  let text = "Hello JavaScript";
+
+  document.write("Original Text: " + text + "<br>");
+
+  document.write("Length: " + text.length + "<br>");
+
+  document.write("Uppercase: " + text.toUpperCase() + "<br>");
+
+  document.write("Lowercase: " + text.toLowerCase() + "<br>");
+
+  document.write("Index of 'JavaScript': " + text.indexOf("JavaScript") + "<br>");
+
+  document.write("Substring (6, 16): " + text.substring(6, 16) + "<br>");
+
+  document.write("Replace 'JavaScript' with 'World': " + text.replace("JavaScript", "World") + "<br>");
+
+  document.write("Slice (6, 16): " + text.slice(6, 16) + "<br>");
+
+  document.write("Char at index 1: " + text.charAt(1) + "<br>");
+
+  document.write("Includes 'Hello': " + text.includes("Hello") + "<br>");
+
+  document.write("Split by space: " + text.split(" ") + "<br>");
+
+
+</script>
+
+</body>
+</html>
+________________________________________________________
+                                                       9
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Box Model</title>
+<style>
+.box {
+width: 200px;
+padding: 20px;
+border: solid black;
+margin: 30px;
+background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<div class="box">This box demonstrates content, padding, border, and margin.</div>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Denomination</title>
+</head>
+<body>
+<script>
+let amount = 163;
+let notes = [100, 50, 20, 10, 5, 2, 1];
+for (let i = 0; i < notes.length; i++) {
+let count = Math.floor(amount / notes[i]);
+if (count > 0) {
+document.write(count + " - " + notes[i] + "s<br>");
+}
+amount %= notes[i];
+}
+</script>
+</body>
+</html>
+________________________________________________________
+                                                      10
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors</title>
+<style>
+/* Simple Selectors */
+p { color: blue; }
+#pid { font-weight: bold; }
+.pclass { background: yellow; }
+* { font-family: Arial; }
+/* Grouping */
+h1, h2 { color: green; }
+/* Pseudo-class */
+a:hover { color: red; }
+/* Pseudo-element */
+p::first-letter {
+color: red;
+}
+</style>
+</head>
+<body>
+<h1>Heading One</h1>
+<h2>Heading Two</h2>
+<p id="pid" class="pclass">Styled paragraph</p>
+<a href="#">Hover me</a>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<script>
+let now = new Date();
+document.write("Current Date: " + now.toDateString() + "<br>");
+document.write("Current Time: " + now.toLocaleTimeString() + "<br>");
+document.write("Year: " + now.getFullYear() + "<br>");
+document.write("Month: " + (now.getMonth() + 1)+ "<br>");
+document.write("Date: " + now.getDate() + "<br>");
+document.write("Day of Week (0=Sun): " + now.getDay() + "<br>");
+document.write("Hours: " + now.getHours() + "<br>");
+document.write("Minutes: " + now.getMinutes() + "<br>");
+document.write("Seconds: " + now.getSeconds() + "<br>");
+document.write("Milliseconds: " + now.getMilliseconds() + "<br>");
+</script>
+</body>
+</html>
+________________________________________________________
+                                                11
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Lists</title>
+</head>
+<body>
+<h2>Ordered List</h2>
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ol>
+<h2>Unordered List</h2>
+<ul>
+<li>Apple</li>
+<li>Banana</li>
+<li>Mango</li>
+</ul>
+<h2>Description List</h2>
+<dl>
+<dt>HTML</dt>
+<dd>HyperText Markup Language</dd>
+<dt>CSS</dt>
+<dd>Cascading Style Sheets</dd>
+</dl>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loops</title>
+</head>
+<body>
+
+<script>
+  const student = {
+    rollno: 1234,
+    name: "Rani",
+    age: 15
+  };
+
+  for (let key in student) {
+    document.write(key + " : " + student[key] + "<br>");
+  }
+
+  document.write("<br>");
+
+  let branches = ["CSE", "ECE", "EEE"];
+
+  for (let dept of branches) {
+    document.write(dept + "<br>");
+  }
+
+  document.write("<br>");
+
+  const numbers = [1, 2, 3];
+  numbers.forEach(num => {
+    document.write(num + "<br>");
+  });
+</script>
+
+</body>
+</html>
+________________________________________________________
+                                                 12
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Table</title>
+</head>
+<body>
+<h2>Weekly Time Table</h2>
+<table border="1">
+<tr>
+<th>Day</th>
+<th>9-10 AM</th>
+<th>10-11 AM</th>
+<th>11-12 PM</th>
+</tr>
+<tr>
+<td>Monday</td>
+<td>Math</td>
+<td>Science</td>
+<td>English</td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>History</td>
+<td>Math</td>
+<td>Computer</td>
+</tr>
+</table>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input and Output</title>
+</head>
+<body>
+<p id="p1"></p>
+<script>
+  let a = 10;
+  let b = parseInt(prompt("Enter a number:"));
+  document.write("Sum of a and b: " + (a + b) + "<br>");  
+  console.log("Sum of a and b: " + (a + b));              
+  window.alert("Sum of a and b: " + (a + b));            
+  document.getElementById("p1").innerHTML = "innerHTML";
+</script>
+</body>
+</html>
+
+________________________________________________________
+                                                      13
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Gallery</title>
+</head>
+<body>
+<h2>Thumbnail Gallery</h2>
+<a href="full1.jpg" target="_blank">
+<img src="thumb1.jpg" width="100" height="100">
+</a>
+<a href="full2.jpg" target="_blank">
+<img src="thumb2.jpg" width="100" height="100">
+</a>
+<a href="full3.jpg" target="_blank">
+<img src="thumb3.jpg" width="100" height="100">
+</a>
+</body>
+</html>
+______________
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regex and String</title>
+</head>
+<body>
+<script>
+  let pattern = /hello/gi;
+  let text1 = "Hello world, HELLO again.";
+ 
+  document.write("test(): " + pattern.test(text1) + "<br>");
+  document.write("exec(): " + pattern.exec(text1) + "<br>");
+
+  document.write("global: " + pattern.global + "<br>");
+  document.write("ignoreCase: " + pattern.ignoreCase + "<br>");
+  document.write("multiline: " + pattern.multiline + "<br>");
+  document.write("source: " + pattern.source + "<br>");
+  document.write("flags: " + pattern.flags + "<br>");
+
+
+  let text = "Hello JavaScript";
+
+  document.write("Original Text: " + text + "<br>");
+
+  document.write("Length: " + text.length + "<br>");
+
+  document.write("Uppercase: " + text.toUpperCase() + "<br>");
+
+  document.write("Lowercase: " + text.toLowerCase() + "<br>");
+
+  document.write("Index of 'JavaScript': " + text.indexOf("JavaScript") + "<br>");
+
+  document.write("Substring (6, 16): " + text.substring(6, 16) + "<br>");
+
+  document.write("Replace 'JavaScript' with 'World': " + text.replace("JavaScript", "World") + "<br>");
+
+  document.write("Slice (6, 16): " + text.slice(6, 16) + "<br>");
+
+  document.write("Char at index 1: " + text.charAt(1) + "<br>");
+
+  document.write("Includes 'Hello': " + text.includes("Hello") + "<br>");
+
+  document.write("Split by space: " + text.split(" ") + "<br>");
+</script>
+</body>
+</html>
